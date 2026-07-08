@@ -17,6 +17,11 @@ class Reports(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+        
+    @app_commands.command(name="reporttest", description="Test reports cog")
+    async def reporttest(self, interaction: discord.Interaction):
+        await interaction.response.send_message("Reports cog is working.", ephemeral=True)
+
     @app_commands.command(
         name="report",
         description="Submit a player report to the Sanity RC admin panel."
@@ -89,6 +94,8 @@ class Reports(commands.Cog):
         embed.set_footer(text=f"Report ID: {data.get('report_id', 'Unknown')}")
 
         await interaction.followup.send(embed=embed, ephemeral=True)
+
+
 
 
 async def setup(bot):
