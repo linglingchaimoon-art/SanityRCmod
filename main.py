@@ -17,7 +17,7 @@ bot = commands.Bot(
 )
 
 statuses = itertools.cycle([
-    discord.Activity(type=discord.ActivityType.listening, name="Coming soon!"),
+    discord.Activity(type=discord.ActivityType.listening, name="Thank you for the 30 sales!"),
 ])
 
 
